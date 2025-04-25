@@ -44,11 +44,8 @@ class ProductCard extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Image.network(
-              product.imageUrl,
-              width: 300,
-              height: 300,
-              fit: BoxFit.fill,
+            Flexible(
+              child: Image.network(product.imageUrl, fit: BoxFit.contain),
             ),
           ],
         ),
